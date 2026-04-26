@@ -436,10 +436,6 @@
     </svg>
   </div>
 
-  <div class="buttons" id="topButtons">
-    <span class="bounce-wrap"><button class="btn btn-primary btn-huge btn-pulse" id="startBtn">▶ Start</button></span>
-  </div>
-
   <div class="question" id="question" hidden>What time is it?</div>
 
   <div class="options" id="options" hidden></div>
@@ -788,7 +784,6 @@ function startGame(){
   state.score = 0;
 
   document.getElementById('overlay').classList.add('hidden');
-  document.getElementById('topButtons').hidden = true;
   document.getElementById('question').hidden = false;
   document.getElementById('options').hidden = false;
   document.getElementById('scorebar').hidden = false;
@@ -934,10 +929,6 @@ buildClockFace();
 // Show a friendly default clock pose
 setHands(10, 10);
 
-document.getElementById('startBtn').addEventListener('click', () => {
-  document.getElementById('overlay').classList.add('hidden');
-  startGame();
-});
 document.getElementById('modalStart').addEventListener('click', startGame);
 </script>
 </body>
